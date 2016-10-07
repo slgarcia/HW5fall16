@@ -22,8 +22,10 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  # your scenario here
+  When I have opted to see movies in alphabetical order
+  Then I should see the title "The Incredibles" before "The Terminator"
 
 Scenario: sort movies in increasing order of release date
-  # your scenario here
+  When I have opted to see movies in increasing order by release date
+  Then I should see the release date "2000-06-21 00:00:00 UTC" before "2001-01-05 00:00:00 UTC"
 
